@@ -328,6 +328,78 @@ A guide for converting Excel data to Neurodata Without Borders (NWB) format usin
 
 ---
 
+https://neuroconv.readthedocs.io/en/main/user_guide/adding_trials.html
+
+The document explains how to add trial timing information to NWB files using PyNWB, including adding custom columns to trials tables, adding trial entries with specific parameters, and saving the NWB file to disk with optimized storage settings.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/aws_demo.html
+
+The document outlines how to deploy NWB data conversions in AWS cloud services using NeuroConv's AWS tools. It provides a detailed tutorial on setting up a pipeline that transfers source data from cloud storage to AWS, performs NWB conversion, and uploads results to the Dandi Archive, covering prerequisites like Google Drive setup, Rclone configuration, AWS account access, and the steps to create and deploy an AWS Batch job for neurophysiology data conversion.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/backend_configuration.html
+
+The document explains how to configure backend file storage in NeuroConv, including controlling chunking, compression, and buffering patterns for NWB files. It covers retrieving default configurations, customizing dataset configurations, and applying them when writing NWB files through DataInterfaces or Converters, with examples showing how to modify compression methods and other parameters.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/csvs.html
+
+This document describes how to specify metadata using tabular formats (CSV files) in the NeurConv library, showing example CSV file structures for sessions and subjects, and providing Python code to read the CSV files, process the data, and convert it to NWB format using SpikeGLXRecordingInterface and DeepLabCutInterface.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/datainterfaces.html
+
+The document describes the BaseDataInterface class in NeuroConv, which provides a unified API for converting data into NWB format, covering its installation with specific dependencies, initialization with source data, extraction and adjustment of metadata, and running the conversion process either directly to a file or by creating an in-memory NWB file that can be modified before saving.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/docker_demo.html
+
+The document demonstrates how to use NeuroConv's Docker implementation to convert neurophysiology data to NWB format using YAML specifications. It walks through a complete example showing how to set up directories, create a YAML configuration file, and run the Docker container with proper volume mounting to convert SpikeGLX and Phy data. The second section explains how to use NeuroConv's Rclone Docker image for data transfers between remote storage systems and local directories.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/expand_path.html
+
+The document describes the path expansion tools in NeuroConv that allow users to identify data files and extract metadata from their file paths. It explains how to use LocalPathExpander to match file patterns and automatically extract metadata like subject IDs and session timestamps from organized directory structures, with examples from real datasets including Allen Institute, Buszaki Lab, and IBL Brain Wide Map data.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/index.html
+
+NeuroConv is a tool for converting neurophysiology experiment data to NWB format, using DataInterface classes to handle specific data formats and a NWBConverter class to combine multiple data sources into a unified conversion with synchronization capabilities.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/linking_sorted_data.html
+
+This document explains how the SortedRecordingConverter maintains proper linkage between sorted neural units and recording electrodes in NWB files by creating electrode table regions, maintaining device relationships, and correctly mapping channel IDs to electrode indices, with examples demonstrating its usage for single-probe recordings.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/nwbconverter.html
+
+NWBConverter is a Python class that simplifies converting multiple neurophysiological data sources with different proprietary formats into a single NWB file, allowing users to combine data interfaces (like SpikeGLXRecording and PhySorting), specify metadata, and control conversion options for each interface.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/temporal_alignment.html
+
+The document explains temporal alignment methods in NeuroConv for synchronizing data across multiple acquisition systems in neurophysiology experiments. It covers three synchronization approaches: 1) aligning start times for simple offset correction, 2) synchronizing timestamps using signals at every sample to correct for drift, and 3) using regular synchronization signals with interpolation. It includes details on extracting TTL pulse signals and implementing temporal alignment within the NWBConverter framework, with code examples for each method.
+
+---
+
+https://neuroconv.readthedocs.io/en/main/user_guide/yaml.html
+
+This document explains how to use YAML files to specify metadata for NWB conversions, showing the format for NWBFile and Subject metadata, indicating required fields, and demonstrating how to incorporate YAML metadata into Python conversion pipelines using NeuroConv's utilities.
+
+---
+
 https://pynwb.readthedocs.io/en/latest/tutorials/advanced_io/h5dataio.html
 
 This document explains how to customize HDF5 dataset I/O settings in PyNWB, including chunking, compression, and filters, using the H5DataIO wrapper to optimize storage and performance while maintaining backend independence.

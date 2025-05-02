@@ -84,13 +84,15 @@ def main(mode: str):
     # Walk through the docs directory
     if mode == 'pynwb':
         docs_gallery_path = 'submodules/pynwb/docs/gallery'
-    elif mode == 'neuroconv':
+    elif mode == 'neuroconv_conversion_examples_gallery':
         docs_gallery_path = 'submodules/neuroconv/docs/conversion_examples_gallery'
+    elif mode == 'neuroconv_user_guide':
+        docs_gallery_path = 'submodules/neuroconv/docs/user_guide'
     else:
-        raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv'.")
+        raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide'.")
     for root, _, files in os.walk(docs_gallery_path):
         for file in files:
-            ext = '.rst' if mode == 'neuroconv' else '.py'
+            ext = '.rst' if mode.startswith('neuroconv') else '.py'
             if file.endswith(ext):
                 file_path = os.path.join(root, file)
                 assert file_path.startswith('submodules/')
@@ -100,13 +102,18 @@ def main(mode: str):
                     # goes to
                     # https://pynwb.readthedocs.io/en/latest/tutorials/domain/ecephys.html
                     url = f"https://pynwb.readthedocs.io/en/latest/tutorials/{rel_path[len('pynwb/docs/gallery/'):-3]}.html"
-                elif mode == 'neuroconv':
+                elif mode == 'neuroconv_conversion_examples_gallery':
                     # submodules/neuroconv/docs/conversion_examples_gallery/recording/intan.rst
                     # goes to
                     # https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/recording/intan.html
                     url = f"https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/{rel_path[len('neuroconv/docs/conversion_examples_gallery/'):-4]}.html"
+                elif mode == 'neuroconv_user_guide':
+                    # submodules/neuroconv/docs/user_guide/csvs.rst
+                    # goes to
+                    # https://neuroconv.readthedocs.io/en/main/user_guide/csvs.html
+                    url = f"https://neuroconv.readthedocs.io/en/main/user_guide/{rel_path[len('neuroconv/docs/user_guide/'):-4]}.html"
                 else:
-                    raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv'.")
+                    raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide'.")
                 try:
                     index, p_tokens, c_tokens = create_file_description(file_path, rel_path, url, index)
                     total_prompt_tokens += p_tokens
@@ -133,4 +140,5 @@ def main(mode: str):
 
 if __name__ == "__main__":
     main('pynwb')
-    main('neuroconv')
+    main('neuroconv_conversion_examples_gallery')
+    main('neuroconv_user_guide')

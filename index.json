@@ -550,6 +550,126 @@
         "prompt_version": "1"
     },
     {
+        "path": "neuroconv/docs/user_guide/adding_trials.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/adding_trials.html",
+        "description": "The document explains how to add trial timing information to NWB files using PyNWB, including adding custom columns to trials tables, adding trial entries with specific parameters, and saving the NWB file to disk with optimized storage settings.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 486,
+        "completion_tokens": 54,
+        "timestamp": "2025-05-02T13:18:08.688905",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/aws_demo.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/aws_demo.html",
+        "description": "The document outlines how to deploy NWB data conversions in AWS cloud services using NeuroConv's AWS tools. It provides a detailed tutorial on setting up a pipeline that transfers source data from cloud storage to AWS, performs NWB conversion, and uploads results to the Dandi Archive, covering prerequisites like Google Drive setup, Rclone configuration, AWS account access, and the steps to create and deploy an AWS Batch job for neurophysiology data conversion.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 1936,
+        "completion_tokens": 102,
+        "timestamp": "2025-05-02T13:17:51.761866",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/backend_configuration.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/backend_configuration.html",
+        "description": "The document explains how to configure backend file storage in NeuroConv, including controlling chunking, compression, and buffering patterns for NWB files. It covers retrieving default configurations, customizing dataset configurations, and applying them when writing NWB files through DataInterfaces or Converters, with examples showing how to modify compression methods and other parameters.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 2856,
+        "completion_tokens": 78,
+        "timestamp": "2025-05-02T13:18:01.925682",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/csvs.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/csvs.html",
+        "description": "This document describes how to specify metadata using tabular formats (CSV files) in the NeurConv library, showing example CSV file structures for sessions and subjects, and providing Python code to read the CSV files, process the data, and convert it to NWB format using SpikeGLXRecordingInterface and DeepLabCutInterface.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 1048,
+        "completion_tokens": 78,
+        "timestamp": "2025-05-02T13:18:13.949950",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/datainterfaces.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/datainterfaces.html",
+        "description": "The document describes the BaseDataInterface class in NeuroConv, which provides a unified API for converting data into NWB format, covering its installation with specific dependencies, initialization with source data, extraction and adjustment of metadata, and running the conversion process either directly to a file or by creating an in-memory NWB file that can be modified before saving.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 2190,
+        "completion_tokens": 79,
+        "timestamp": "2025-05-02T13:18:20.884269",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/docker_demo.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/docker_demo.html",
+        "description": "The document demonstrates how to use NeuroConv's Docker implementation to convert neurophysiology data to NWB format using YAML specifications. It walks through a complete example showing how to set up directories, create a YAML configuration file, and run the Docker container with proper volume mounting to convert SpikeGLX and Phy data. The second section explains how to use NeuroConv's Rclone Docker image for data transfers between remote storage systems and local directories.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 1892,
+        "completion_tokens": 107,
+        "timestamp": "2025-05-02T13:18:17.424045",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/expand_path.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/expand_path.html",
+        "description": "The document describes the path expansion tools in NeuroConv that allow users to identify data files and extract metadata from their file paths. It explains how to use LocalPathExpander to match file patterns and automatically extract metadata like subject IDs and session timestamps from organized directory structures, with examples from real datasets including Allen Institute, Buszaki Lab, and IBL Brain Wide Map data.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 3972,
+        "completion_tokens": 84,
+        "timestamp": "2025-05-02T13:17:55.338508",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/index.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/index.html",
+        "description": "NeuroConv is a tool for converting neurophysiology experiment data to NWB format, using DataInterface classes to handle specific data formats and a NWBConverter class to combine multiple data sources into a unified conversion with synchronization capabilities.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 397,
+        "completion_tokens": 55,
+        "timestamp": "2025-05-02T13:18:03.955076",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/linking_sorted_data.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/linking_sorted_data.html",
+        "description": "This document explains how the SortedRecordingConverter maintains proper linkage between sorted neural units and recording electrodes in NWB files by creating electrode table regions, maintaining device relationships, and correctly mapping channel IDs to electrode indices, with examples demonstrating its usage for single-probe recordings.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 906,
+        "completion_tokens": 66,
+        "timestamp": "2025-05-02T13:18:11.099017",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/nwbconverter.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/nwbconverter.html",
+        "description": "NWBConverter is a Python class that simplifies converting multiple neurophysiological data sources with different proprietary formats into a single NWB file, allowing users to combine data interfaces (like SpikeGLXRecording and PhySorting), specify metadata, and control conversion options for each interface.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 1226,
+        "completion_tokens": 69,
+        "timestamp": "2025-05-02T13:18:06.833695",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/temporal_alignment.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/temporal_alignment.html",
+        "description": "The document explains temporal alignment methods in NeuroConv for synchronizing data across multiple acquisition systems in neurophysiology experiments. It covers three synchronization approaches: 1) aligning start times for simple offset correction, 2) synchronizing timestamps using signals at every sample to correct for drift, and 3) using regular synchronization signals with interpolation. It includes details on extracting TTL pulse signals and implementing temporal alignment within the NWBConverter framework, with code examples for each method.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 2007,
+        "completion_tokens": 107,
+        "timestamp": "2025-05-02T13:17:42.786672",
+        "prompt_version": "1"
+    },
+    {
+        "path": "neuroconv/docs/user_guide/yaml.rst",
+        "url": "https://neuroconv.readthedocs.io/en/main/user_guide/yaml.html",
+        "description": "This document explains how to use YAML files to specify metadata for NWB conversions, showing the format for NWBFile and Subject metadata, indicating required fields, and demonstrating how to incorporate YAML metadata into Python conversion pipelines using NeuroConv's utilities.",
+        "model": "anthropic/claude-3.7-sonnet",
+        "prompt_tokens": 1179,
+        "completion_tokens": 62,
+        "timestamp": "2025-05-02T13:17:58.004444",
+        "prompt_version": "1"
+    },
+    {
         "path": "pynwb/docs/gallery/advanced_io/h5dataio.py",
         "url": "https://pynwb.readthedocs.io/en/latest/tutorials/advanced_io/h5dataio.html",
         "description": "This document explains how to customize HDF5 dataset I/O settings in PyNWB, including chunking, compression, and filters, using the H5DataIO wrapper to optimize storage and performance while maintaining backend independence.",
