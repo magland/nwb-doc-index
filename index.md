@@ -1,9 +1,3 @@
-https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/__init_.html
-
-This document appears to be an unofficial user's guide for the Kodiak Frontier 100 e-bike, covering specifications, features like walk assistance and light activation, adjustment procedures, maintenance information, safety guidance on maneuvers like tight turns and automated pedaling, and contact information for the manufacturer.
-
----
-
 https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/behavior/audio.html
 
 The document explains how to convert audio data from WAV format to NWB format using NeuroConv's AudioInterface class, including installation instructions, sample code for executing a conversion, and steps for adding metadata such as session start time.

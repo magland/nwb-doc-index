@@ -1,15 +1,5 @@
 [
     {
-        "path": "neuroconv/docs/conversion_examples_gallery/__init__.py",
-        "url": "https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/__init_.html",
-        "description": "This document appears to be an unofficial user's guide for the Kodiak Frontier 100 e-bike, covering specifications, features like walk assistance and light activation, adjustment procedures, maintenance information, safety guidance on maneuvers like tight turns and automated pedaling, and contact information for the manufacturer.",
-        "model": "anthropic/claude-3.7-sonnet",
-        "prompt_tokens": 114,
-        "completion_tokens": 65,
-        "timestamp": "2025-05-02T10:26:03.102917",
-        "prompt_version": "1"
-    },
-    {
         "path": "neuroconv/docs/conversion_examples_gallery/behavior/audio.rst",
         "url": "https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/behavior/audio.html",
         "description": "The document explains how to convert audio data from WAV format to NWB format using NeuroConv's AudioInterface class, including installation instructions, sample code for executing a conversion, and steps for adding metadata such as session start time.",
