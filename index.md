@@ -1,3 +1,45 @@
+https://hdmf.readthedocs.io/en/stable/tutorials/multicontainerinterface.html
+
+The document explains the MultiContainerInterface class in HDMF which provides a framework for creating container classes that manage collections of other containers, including how to configure collection attributes, generate methods for adding/retrieving items, handle parent-child relationships, and customize functionality through class configuration settings.
+
+---
+
+https://hdmf.readthedocs.io/en/stable/tutorials/plot_aligneddynamictable.html
+
+A user guide explaining the AlignedDynamicTable class in HDMF, which is a column-based table that supports grouping columns by category, describing its features, construction, and how to interact with it through adding and accessing data, rows, columns, categories, and cells.
+
+---
+
+https://hdmf.readthedocs.io/en/stable/tutorials/plot_dynamictable_howto.html
+
+A user guide for working with DynamicTable objects, covering how to create tables, add columns and rows, work with ragged array data, reference other tables, and convert between DynamicTable and pandas DataFrame formats.
+
+---
+
+https://hdmf.readthedocs.io/en/stable/tutorials/plot_dynamictable_tutorial.html
+
+A tutorial on how to create, manipulate, and access DynamicTable objects in HDMF, covering basic operations like adding columns (including ragged arrays and references to other tables), adding rows, and displaying table contents as pandas DataFrames with examples of different access patterns.
+
+---
+
+https://hdmf.readthedocs.io/en/stable/tutorials/plot_external_resources.html
+
+HERD (HDMF External Resources Data Structure) is an experimental class that provides a way to link data in files to external ontologies or resources, organizing connections between internal keys and external entities through a system of interlinked tables (KeyTable, FileTable, EntityTable, etc.) with convenience functions for treating these as a unified structure.
+
+---
+
+https://hdmf.readthedocs.io/en/stable/tutorials/plot_generic_data_chunk_tutorial.html
+
+This tutorial explains how to use GenericDataChunkIterator to create custom data iterators for efficiently processing large datasets, with a focus on implementing the core methods (_get_data, _get_maxshape, _get_dtype) and how to write data iteratively to HDF5 files while managing memory usage through buffer and chunk sizing.
+
+---
+
+https://hdmf.readthedocs.io/en/stable/tutorials/plot_term_set.html
+
+This document explains how to use HDMF's TermSet and TermSetWrapper classes for creating and validating against custom term sets from ontologies, allowing users to ensure data and attributes conform to standardized terminology from sources like brain atlases, species taxonomies, and other scientific ontologies.
+
+---
+
 https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/behavior/audio.html
 
 The document explains how to convert audio data from WAV format to NWB format using NeuroConv's AudioInterface class, including installation instructions, sample code for executing a conversion, and steps for adding metadata such as session start time.

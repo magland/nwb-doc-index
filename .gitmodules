@@ -7,3 +7,6 @@
 [submodule "submodules/nwbinspector"]
 	path = submodules/nwbinspector
 	url = https://github.com/NeurodataWithoutBorders/nwbinspector
+[submodule "submodules/hdmf"]
+	path = submodules/hdmf
+	url = https://github.com/hdmf-dev/hdmf

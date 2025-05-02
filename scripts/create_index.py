@@ -90,11 +90,16 @@ def main(mode: str):
         docs_gallery_path = 'submodules/neuroconv/docs/user_guide'
     elif mode == 'nwbinspector':
         docs_gallery_path = 'submodules/nwbinspector/docs/best_practices'
+    elif mode == 'hdmf':
+        docs_gallery_path = 'submodules/hdmf/docs/gallery'
     else:
-        raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide' or 'nwbinspector'.")
+        raise ValueError("Invalid mode.")
     for root, _, files in os.walk(docs_gallery_path):
         for file in files:
-            ext = '.rst' if mode.startswith('neuroconv') or mode.startswith('nwbinspector') else '.py'
+            if mode.startswith('neuroconv') or mode.startswith('nwbinspector'):
+                ext = '.rst'
+            else:
+                ext = '.py'
             if file == 'index.py' or file == 'index.rst':
                 # Skip index files
                 continue
@@ -122,8 +127,13 @@ def main(mode: str):
                     # goes to
                     # https://nwbinspector.readthedocs.io/en/dev/best_practices/nwbfile_metadata.html
                     url = f"https://nwbinspector.readthedocs.io/en/dev/best_practices/{rel_path[len('nwbinspector/docs/best_practices/'):-4]}.html"
+                elif mode == 'hdmf':
+                    # submodules/hdmf/docs/gallery/plot_aligneddynamictable.py
+                    # goes to
+                    # https://hdmf.readthedocs.io/en/stable/tutorials/plot_aligneddynamictable.html
+                    url = f"https://hdmf.readthedocs.io/en/stable/tutorials/{rel_path[len('hdmf/docs/gallery/'):-3]}.html"
                 else:
-                    raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide' or 'nwbinspector'.")
+                    raise ValueError("Invalid mode.")
                 try:
                     index, p_tokens, c_tokens = create_file_description(file_path, rel_path, url, index)
                     total_prompt_tokens += p_tokens
@@ -153,3 +163,4 @@ if __name__ == "__main__":
     main('neuroconv_conversion_examples_gallery')
     main('neuroconv_user_guide')
     main('nwbinspector')
+    main('hdmf')
