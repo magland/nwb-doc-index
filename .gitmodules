@@ -4,3 +4,6 @@
 [submodule "submodules/neuroconv"]
 	path = submodules/neuroconv
 	url = https://github.com/catalystneuro/neuroconv
+[submodule "submodules/nwbinspector"]
+	path = submodules/nwbinspector
+	url = https://github.com/NeurodataWithoutBorders/nwbinspector

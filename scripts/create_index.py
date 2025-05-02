@@ -88,11 +88,16 @@ def main(mode: str):
         docs_gallery_path = 'submodules/neuroconv/docs/conversion_examples_gallery'
     elif mode == 'neuroconv_user_guide':
         docs_gallery_path = 'submodules/neuroconv/docs/user_guide'
+    elif mode == 'nwbinspector':
+        docs_gallery_path = 'submodules/nwbinspector/docs/best_practices'
     else:
-        raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide'.")
+        raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide' or 'nwbinspector'.")
     for root, _, files in os.walk(docs_gallery_path):
         for file in files:
-            ext = '.rst' if mode.startswith('neuroconv') else '.py'
+            ext = '.rst' if mode.startswith('neuroconv') or mode.startswith('nwbinspector') else '.py'
+            if file == 'index.py' or file == 'index.rst':
+                # Skip index files
+                continue
             if file.endswith(ext):
                 file_path = os.path.join(root, file)
                 assert file_path.startswith('submodules/')
@@ -112,8 +117,13 @@ def main(mode: str):
                     # goes to
                     # https://neuroconv.readthedocs.io/en/main/user_guide/csvs.html
                     url = f"https://neuroconv.readthedocs.io/en/main/user_guide/{rel_path[len('neuroconv/docs/user_guide/'):-4]}.html"
+                elif mode == 'nwbinspector':
+                    # submodules/nwbinspector/docs/best_practices/nwbfile_metadata.py
+                    # goes to
+                    # https://nwbinspector.readthedocs.io/en/dev/best_practices/nwbfile_metadata.html
+                    url = f"https://nwbinspector.readthedocs.io/en/dev/best_practices/{rel_path[len('nwbinspector/docs/best_practices/'):-3]}.html"
                 else:
-                    raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide'.")
+                    raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide' or 'nwbinspector'.")
                 try:
                     index, p_tokens, c_tokens = create_file_description(file_path, rel_path, url, index)
                     total_prompt_tokens += p_tokens
@@ -142,3 +152,4 @@ if __name__ == "__main__":
     main('pynwb')
     main('neuroconv_conversion_examples_gallery')
     main('neuroconv_user_guide')
+    main('nwbinspector')
