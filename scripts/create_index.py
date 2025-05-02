@@ -121,7 +121,7 @@ def main(mode: str):
                     # submodules/nwbinspector/docs/best_practices/nwbfile_metadata.py
                     # goes to
                     # https://nwbinspector.readthedocs.io/en/dev/best_practices/nwbfile_metadata.html
-                    url = f"https://nwbinspector.readthedocs.io/en/dev/best_practices/{rel_path[len('nwbinspector/docs/best_practices/'):-3]}.html"
+                    url = f"https://nwbinspector.readthedocs.io/en/dev/best_practices/{rel_path[len('nwbinspector/docs/best_practices/'):-4]}.html"
                 else:
                     raise ValueError("Invalid mode. Use 'pynwb' or 'neuroconv_conversion_examples_gallery' or 'neuroconv_user_guide' or 'nwbinspector'.")
                 try:

@@ -388,81 +388,81 @@ This document explains how to use YAML files to specify metadata for NWB convers
 
 ---
 
-https://nwbinspector.readthedocs.io/en/dev/best_practices/behavior..html
+https://nwbinspector.readthedocs.io/en/dev/best_practices/behavior.html
 
-The document outlines best practices for SpatialSeries objects in NWB format, specifying that they should store subject position data with 1-3 columns (x, y, z), use appropriate units ("degrees" or "radians") for CompassDirection, and maintain data values within expected ranges (-2π to 2π for radians, -360 to 360 for degrees).
-
----
-
-https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index..html
-
-This document outlines best practices for users of the NWB (Neurodata Without Borders) data standard, providing guidelines to ensure consistent usage while balancing flexibility and standardization across various neuroscience applications, including specific advice for handling time series, tables, metadata, and various data types like behavior, electrophysiology, and optical physiology.
+This document explains best practices for the SpatialSeries object in NWB format, covering dimensionality requirements (1-3 columns), appropriate units for compass directions ("degrees" or "radians"), and the valid value ranges for data with those units (-2π to 2π for radians, -360 to 360 for degrees).
 
 ---
 
-https://nwbinspector.readthedocs.io/en/dev/best_practices/ecephys..html
+https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html
 
-This document covers extracellular electrophysiology best practices in NWB files, including guidelines for electrode metadata (location, ontologies, coordinates), avoiding data duplication, and proper organization of the Units Table (ensuring positive and ascending spike times, and proper handling of observation intervals).
-
----
-
-https://nwbinspector.readthedocs.io/en/dev/best_practices/extensions..html
-
-The document explains NWB schema extensions, emphasizing they should only be used when necessary due to maintenance costs, and recommends using existing neurodata types, providing proper documentation, and storing specifications within NWBFiles to ensure data interpretability.
+This document provides guidelines and best practices for using the NWB (Neurodata Without Borders) data standard, covering topics such as file metadata, time series, tables, behavior, electrophysiology, optical physiology, and extensions, while emphasizing the need to balance flexibility with standardization to support diverse neuroscience use cases.
 
 ---
 
-https://nwbinspector.readthedocs.io/en/dev/best_practices/general..html
+https://nwbinspector.readthedocs.io/en/dev/best_practices/ecephys.html
 
-The document outlines best practices for naming and describing neurodata types in NWB files, covering conventions such as using CamelCase names, avoiding slashes and colons in names, providing detailed descriptions instead of relying on names for metadata, avoiding placeholder text in required fields, and preventing metadata duplication across objects.
-
----
-
-https://nwbinspector.readthedocs.io/en/dev/best_practices/image_series..html
-
-The document describes best practices for storing ImageSeries data in NWB format, specifically recommending external storage with relative paths for animal behavior videos to leverage video compression codecs, while suggesting internal storage with lossless compression for neurophysiological data like TwoPhotonSeries.
+The document provides best practices for extracellular electrophysiology data in NWB format, covering electrode location documentation, anatomical coordinate systems, avoiding metadata duplication, and proper formatting of spike time data in the Units Table, including requirements for positive timestamps and proper observation intervals.
 
 ---
 
-https://nwbinspector.readthedocs.io/en/dev/best_practices/images..html
+https://nwbinspector.readthedocs.io/en/dev/best_practices/extensions.html
 
-This document outlines best practices for storing images in NWB files, including requirements for the "order_of_images" field (values should be unique and length should match the number of Image objects), and a note that IndexSeries objects should point to Images containers rather than TimeSeries objects (which will be deprecated).
-
----
-
-https://nwbinspector.readthedocs.io/en/dev/best_practices/nwbfile_metadata..html
-
-The document describes NWBFile metadata best practices, covering file organization, time referencing, metadata requirements, and subject information specifications for neurophysiology data files, including proper formatting for identifiers, timestamps, experimenter names, and subject attributes like species, sex, and age.
+The document explains NWB schema extensions best practices, emphasizing that extensions should only be created when necessary, recommending the use of existing neurodata types or pre-existing extensions first, and providing guidance on documentation and caching specifications within NWBFiles.
 
 ---
 
-https://nwbinspector.readthedocs.io/en/dev/best_practices/ogen..html
+https://nwbinspector.readthedocs.io/en/dev/best_practices/general.html
 
-The document outlines a best practice for OptogeneticSeries in NWB files, specifying that each OptogeneticStimulusSite object should be referenced by at least one OptogeneticSeries in the same file, and includes a reference to a check function for validation.
-
----
-
-https://nwbinspector.readthedocs.io/en/dev/best_practices/ophys..html
-
-This document describes optical physiology practices, focusing on the requirement that image masks in plane segmentation must maintain the same shape as their reference images.
+This document outlines best practices for naming and describing neurodata types in NWB files, including using class names for object instances, avoiding slashes and colons in names, providing detailed descriptions for metadata, avoiding placeholder text in required fields, and preventing duplication of metadata across objects.
 
 ---
 
-https://nwbinspector.readthedocs.io/en/dev/best_practices/simulated_data..html
+https://nwbinspector.readthedocs.io/en/dev/best_practices/image_series.html
 
-The document explains how simulated data should be stored in NWB (Neurodata Without Borders) format, specifically that simulation outputs can be stored in NWB files while simulation settings should not be included. It mentions the "simulation_output" extension for storing continuous recordings from multiple cells and compartments, but notes that simulation configuration parameters are outside NWB's scope.
-
----
-
-https://nwbinspector.readthedocs.io/en/dev/best_practices/tables..html
-
-This document describes best practices for working with tables in the NWB (Neurodata Without Borders) format, covering proper handling of table values, avoiding empty tables, using appropriate data types for columns, ensuring time values are in seconds relative to a reference time, and maintaining unique IDs for dynamic tables.
+This document provides best practices for storing different types of video data in NWB format, recommending external storage with compression for animal behavior videos and internal storage with lossless compression for neurophysiological data, along with guidance on using relative paths for external files.
 
 ---
 
-https://nwbinspector.readthedocs.io/en/dev/best_practices/time_series..html
+https://nwbinspector.readthedocs.io/en/dev/best_practices/images.html
 
-This document outlines best practices for using TimeSeries and its subtypes in NWB files, covering data orientation, measurement units, time references, timestamps handling, chunking, compression, and proper configuration of rate, resolution, and continuity parameters.
+The document provides best practices for image storage in NWB format, focusing on proper use of the "order_of_images" field in Images objects (which should contain unique values equal to the number of Image objects) and advising that IndexSeries objects should point to an Images container rather than TimeSeries (noting this latter usage will be deprecated).
+
+---
+
+https://nwbinspector.readthedocs.io/en/dev/best_practices/nwbfile_metadata.html
+
+The document describes NWBFile metadata best practices, covering file organization principles, global time references, acquisition vs. processing data, metadata requirements (experimenter, subject information, etc.), and formatting standards for fields like subject sex, species, and age that should follow specific conventions.
+
+---
+
+https://nwbinspector.readthedocs.io/en/dev/best_practices/ogen.html
+
+The document outlines the best practice requirement that each OptogeneticStimulusSite object should be linked to at least one OptogeneticSeries within the same NWB file, and includes reference to a check function that validates this relationship.
+
+---
+
+https://nwbinspector.readthedocs.io/en/dev/best_practices/ophys.html
+
+The document explains a requirement for plane segmentation in optical physiology, specifically that the image_mask column of a PlaneSegmentation must have the same shape as each item in the reference_images for proper consistency.
+
+---
+
+https://nwbinspector.readthedocs.io/en/dev/best_practices/simulated_data.html
+
+The document explains that simulated data can be stored in NWB (Neurodata Without Borders) format to facilitate comparison with in vivo results, but simulation settings should not be included. It describes the "simulation_output" extension for storing simulation data from multiple cells and compartments, noting that users need to create custom extensions if they want to store simulation parameters.
+
+---
+
+https://nwbinspector.readthedocs.io/en/dev/best_practices/tables.html
+
+This document explains best practices for using dynamic tables in NWB files, including recommendations to avoid storing JSON in string columns, not writing empty tables, using appropriate data structures for single-row data, omitting columns with only NaN values, optimizing table layout with more rows than columns, using boolean data types properly, storing time values in seconds relative to a reference time, and maintaining unique IDs in tables.
+
+---
+
+https://nwbinspector.readthedocs.io/en/dev/best_practices/time_series.html
+
+This document covers best practices for using TimeSeries objects in NWB files, including guidelines for data orientation, units of measurement, time references, timestamps handling, chunking, compression, and proper usage of TimeSeries subtypes.
 
 ---
 
