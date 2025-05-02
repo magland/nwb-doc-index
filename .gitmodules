@@ -1,0 +1,6 @@
+[submodule "submodules/pynwb"]
+	path = submodules/pynwb
+	url = https://github.com/NeurodataWithoutBorders/pynwb
+[submodule "submodules/neuroconv"]
+	path = submodules/neuroconv
+	url = https://github.com/catalystneuro/neuroconv
